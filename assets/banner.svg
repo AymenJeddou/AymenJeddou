@@ -1,0 +1,60 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 300" width="1200" height="300">
+  <style>
+    .serif { font-family: 'Instrument Serif', Georgia, 'Times New Roman', serif; }
+    .mono { font-family: 'IBM Plex Mono', Consolas, 'Courier New', monospace; }
+    .pt { fill: #ece7dc; opacity: .22; }
+    .hit { fill: #ff6b2c; opacity: 0; animation: hit 6s infinite; }
+    .ray { stroke: #ff6b2c; stroke-width: 1; opacity: 0; animation: hit 6s infinite; }
+    .q { fill: none; stroke: #ff6b2c; stroke-width: 1.5; animation: q 6s infinite; }
+    .d2 { animation-delay: .15s; } .d3 { animation-delay: .3s; } .d4 { animation-delay: .45s; } .d5 { animation-delay: .6s; }
+    @keyframes hit { 0%, 15% { opacity: 0; } 25%, 75% { opacity: .9; } 88%, 100% { opacity: 0; } }
+    @keyframes q { 0%, 10% { opacity: 0; } 20%, 80% { opacity: 1; } 92%, 100% { opacity: 0; } }
+    .flow { stroke: #ff6b2c; stroke-dasharray: 4 10; animation: flow 1.2s linear infinite; }
+    @keyframes flow { to { stroke-dashoffset: -28; } }
+    .caret { animation: blink 1s steps(1) infinite; }
+    @keyframes blink { 50% { opacity: 0; } }
+  </style>
+  <rect width="1200" height="300" fill="#11110f"/>
+  <rect x=".5" y=".5" width="1199" height="299" fill="none" stroke="#2a2925"/>
+
+  <!-- embedding field -->
+  <g>
+    <circle class="pt" cx="760" cy="60" r="1.6"/><circle class="pt" cx="782" cy="84" r="1.6"/><circle class="pt" cx="805" cy="52" r="1.6"/>
+    <circle class="pt" cx="830" cy="96" r="1.6"/><circle class="pt" cx="742" cy="102" r="1.6"/><circle class="pt" cx="866" cy="70" r="1.6"/>
+    <circle class="pt" cx="900" cy="120" r="1.6"/><circle class="pt" cx="936" cy="88" r="1.6"/><circle class="pt" cx="968" cy="140" r="1.6"/>
+    <circle class="pt" cx="1010" cy="100" r="1.6"/><circle class="pt" cx="1052" cy="64" r="1.6"/><circle class="pt" cx="1090" cy="118" r="1.6"/>
+    <circle class="pt" cx="1128" cy="80" r="1.6"/><circle class="pt" cx="1150" cy="150" r="1.6"/><circle class="pt" cx="1100" cy="190" r="1.6"/>
+    <circle class="pt" cx="1060" cy="230" r="1.6"/><circle class="pt" cx="1012" cy="200" r="1.6"/><circle class="pt" cx="980" cy="250" r="1.6"/>
+    <circle class="pt" cx="930" cy="215" r="1.6"/><circle class="pt" cx="880" cy="244" r="1.6"/><circle class="pt" cx="846" cy="196" r="1.6"/>
+    <circle class="pt" cx="800" cy="232" r="1.6"/><circle class="pt" cx="770" cy="178" r="1.6"/><circle class="pt" cx="720" cy="220" r="1.6"/>
+    <circle class="pt" cx="1140" cy="250" r="1.6"/><circle class="pt" cx="1170" cy="40" r="1.6"/><circle class="pt" cx="700" cy="140" r="1.6"/>
+    <circle class="pt" cx="890" cy="40" r="1.6"/><circle class="pt" cx="1000" cy="40" r="1.6"/><circle class="pt" cx="1040" cy="270" r="1.6"/>
+  </g>
+  <!-- query + top-5 -->
+  <line class="ray" x1="950" y1="165" x2="968" y2="140"/><line class="ray d2" x1="950" y1="165" x2="900" y2="120"/>
+  <line class="ray d3" x1="950" y1="165" x2="1012" y2="200"/><line class="ray d4" x1="950" y1="165" x2="930" y2="215"/>
+  <line class="ray d5" x1="950" y1="165" x2="1010" y2="100"/>
+  <circle class="hit" cx="968" cy="140" r="3"/><circle class="hit d2" cx="900" cy="120" r="3"/><circle class="hit d3" cx="1012" cy="200" r="3"/>
+  <circle class="hit d4" cx="930" cy="215" r="3"/><circle class="hit d5" cx="1010" cy="100" r="3"/>
+  <circle class="q" cx="950" cy="165" r="6"/>
+  <text class="mono hit" x="962" y="178" font-size="11">query → top-5</text>
+
+  <!-- text -->
+  <text class="mono" x="60" y="72" font-size="13" fill="#9a9486" letter-spacing="2">SOFTWARE &amp; DATA ENGINEERING · FSB, TUNISIA</text>
+  <text class="serif" x="56" y="160" font-size="84" fill="#ece7dc">Aymen <tspan font-style="italic">Jeddou</tspan></text>
+  <text x="60" y="206" font-size="20" fill="#d6d0c3" font-family="'IBM Plex Sans', 'Segoe UI', Helvetica, Arial, sans-serif">I build retrieval systems that can <tspan class="serif" font-style="italic" font-size="24" fill="#ff6b2c">prove</tspan> they work — and the data pipelines that feed them.</text>
+
+  <!-- mini pipeline -->
+  <g class="mono" font-size="11" fill="#9a9486">
+    <text x="60" y="258">ingest</text><text x="150" y="258">chunk</text><text x="232" y="258">embed</text>
+    <text x="316" y="258">hybrid search</text><text x="440" y="258">rrf</text><text x="496" y="258" fill="#ece7dc">answer [1][2]</text>
+    <text x="598" y="258" fill="#ff6b2c" class="caret">▍</text>
+  </g>
+  <g stroke-width="1.2">
+    <line x1="108" y1="254" x2="142" y2="254" stroke="#3b3934"/><line class="flow" x1="108" y1="254" x2="142" y2="254"/>
+    <line x1="192" y1="254" x2="224" y2="254" stroke="#3b3934"/><line class="flow" x1="192" y1="254" x2="224" y2="254"/>
+    <line x1="274" y1="254" x2="308" y2="254" stroke="#3b3934"/><line class="flow" x1="274" y1="254" x2="308" y2="254"/>
+    <line x1="410" y1="254" x2="432" y2="254" stroke="#3b3934"/><line class="flow" x1="410" y1="254" x2="432" y2="254"/>
+    <line x1="464" y1="254" x2="488" y2="254" stroke="#3b3934"/><line class="flow" x1="464" y1="254" x2="488" y2="254"/>
+  </g>
+</svg>
